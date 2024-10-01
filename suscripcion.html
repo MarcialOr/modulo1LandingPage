@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siman</title>
+    <!-- Enlace a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Enlace a CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container">
+            <a class="navbar-brand" href="#">Siman</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promociones.html">Promociones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suscripcion.html">Suscribete</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel de Promociones -->
+    <section id="full-screen-carousel">
+        <div id="promocionesCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./src/img/1997-McLaren-F1-GTR-Longtail-009-1600.jpg" class="d-block w-100" alt="Promoción 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Descuento en Electrónicos</h5>
+                        <p>20% de descuento en todos los productos electrónicos.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#promocionesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#promocionesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+    
+
+    <section id="suscripcion" class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h2>Suscríbete para Actualizaciones Automáticas</h2>
+                <p>Recibe las últimas novedades, promociones y ofertas directamente en tu correo.</p>
+                <form id="subscription-form" action="#" method="post">
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="subscribe-button">Suscribirse</button>
+                </form>
+                <div id="subscription-message" class="mt-3"></div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <br>
+    <section class="cta bg-primary text-white text-center py-5">
+        <div class="container">
+            <h2>Únete a nuestra comunidad</h2>
+            <p>Recibe las últimas noticias y ofertas directamente en tu correo.</p>
+            <a href="suscripcion.html">
+                <button class="btn btn-warning btn-lg">Suscribirse</button>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <p>© 2024 Siman. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Enlace a Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('subscription-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evitar que el formulario se envíe por completo (sin recargar la página)
+            
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value;
+            const messageDiv = document.getElementById('subscription-message');
+            const subscribeButton = document.getElementById('subscribe-button');
+            
+            if (email) {
+                // Muestra el mensaje de éxito
+                messageDiv.innerHTML = `<div class="alert alert-success">¡Gracias por suscribirte! Te mantendremos al tanto de las actualizaciones.</div>`;
+                
+                // Deshabilita el campo de email y el botón
+                emailInput.disabled = true;
+                subscribeButton.disabled = true;
+                
+                // Opcionalmente, puedes cambiar el texto del botón para indicar que está deshabilitado
+                subscribeButton.innerText = "Suscripción completada";
+            } else {
+                messageDiv.innerHTML = `<div class="alert alert-danger">Por favor, ingresa un correo electrónico válido.</div>`;
+            }
+        });
+    </script>
+    
+
+</body>
+</html>

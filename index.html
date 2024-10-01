@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siman</title>
+    <!-- Enlace a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Enlace a CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="bg-primary text-white text-center py-4">
+        <div class="container">
+            <h1>Bienvenidos a Siman</h1>
+            <p>Donde las mejores promociones te esperan</p>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container">
+            <a class="navbar-brand" href="#">Siman</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promociones.html">Promociones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suscripcion.html">Suscribete</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel de Promociones -->
+    <section id="full-screen-carousel">
+        <div id="promocionesCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./src/img/1997-McLaren-F1-GTR-Longtail-009-1600.jpg" class="d-block w-100" alt="Promoción 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Descuento en Electrónicos</h5>
+                        <p>20% de descuento en todos los productos electrónicos.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#promocionesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#promocionesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+    
+
+    <!-- Sección de Cards de Promociones -->
+    <section id="promociones-cards" class="container">
+        <h2 class="text-center mb-4">Nuestras Promociones</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="./src/img/electr1.jpg" class="card-img-top" alt="Promoción 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Electrónica al 20% Descuento</h5>
+                        <p class="card-text">Aprovecha nuestra oferta en toda la línea de electrónicos.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="./src/img/collecionesVerano.jpg" class="card-img-top" alt="Promoción 2">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Ropa de Verano</h5>
+                        <p class="card-text">Descuentos de hasta 30% en la nueva colección de verano.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="./src/img/mueblepromo1.jpg" class="card-img-top" alt="Promoción 3">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Muebles para el Hogar</h5>
+                        <p class="card-text">Descuento de hasta 40% en muebles seleccionados.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <section class="cta bg-primary text-white text-center py-5">
+        <div class="container">
+            <h2>Únete a nuestra comunidad</h2>
+            <p>Recibe las últimas noticias y ofertas directamente en tu correo.</p>
+            <a href="suscripcion.html">
+                <button class="btn btn-warning btn-lg">Suscribirse</button>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <p>© 2024 Siman. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Enlace a Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
